@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    env_file:
+      - .env.dev
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_USERNAME=${DB_USER}
+    expose:
+      - ${DB_PORT}

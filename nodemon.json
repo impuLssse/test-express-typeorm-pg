@@ -1,0 +1,12 @@
+{
+  "restartable": "rs",
+  "ignore": [".git", "node_modules", "dist"],
+  "watch": ["src", "libs"],
+  "execMap": {
+    "ts": "node -r ts-node/register"
+  },
+  
+  "events": {
+    "restart": "node -e console.clear()"
+  }
+}
